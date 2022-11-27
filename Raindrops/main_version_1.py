@@ -21,7 +21,7 @@ class RainGame:
         while True:
             self._check_events()
             self._update_screen()
-        #    self._update_rains()
+            self._update_rains()
 
     def _check_events(self):
         for event in pygame.event.get():
@@ -30,7 +30,6 @@ class RainGame:
 
     def _update_screen(self):
         self.screen.fill(self.settings.bg_color)
-        self.rain.blitme()
         self.rains.draw(self.screen)
         pygame.display.flip()
 
